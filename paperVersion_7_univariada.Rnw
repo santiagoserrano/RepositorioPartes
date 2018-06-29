@@ -1,6 +1,6 @@
-\section{Exploración Univariada}\label{univariada}
+\section{Exploraci??n Univariada}\label{univariada}
 
-En esta sección exploro cada índice. En esta sección exploro cada índice. En esta sección exploro cada índice. En esta sección exploro cada índice. En esta sección exploro cada índice. En esta sección exploro cada índice. En esta sección exploro cada índice. En esta sección exploro cada índice. En esta sección exploro cada índice.
+En esta secci??n exploro cada ??ndice. En esta secci??n exploro cada ??ndice. En esta secci??n exploro cada ??ndice. En esta secci??n exploro cada ??ndice. En esta secci??n exploro cada ??ndice. En esta secci??n exploro cada ??ndice. En esta secci??n exploro cada ??ndice. En esta secci??n exploro cada ??ndice. En esta secci??n exploro cada ??ndice.
 
 
 
@@ -9,7 +9,7 @@ En esta sección exploro cada índice. En esta sección exploro cada índice. En
 filename="indexes.csv"
 dataidx=read.csv(filename, stringsAsFactors = FALSE)
 
-# previsión:
+# previsi??n:
 level5=c("muy malo","malo","medio","bueno","muy bueno")
 level4=c("muy malo","malo","bueno","muy bueno")
 level3=c("muy malo","medio","muy bueno")
@@ -17,7 +17,7 @@ level3=c("muy malo","medio","muy bueno")
 @
 
 
-Para conocer el comportamiento de las variables se ha preparado la Tabla \ref{Tfrecuencias}, donde se describe la distribución de las modalidades de cada variable. Los números representan la situación de algun país en ese indicador, donde el mayor valor numérico es la mejor situación.
+Para conocer el comportamiento de las variables se ha preparado la Tabla \ref{Tfrecuencias}, donde se describe la distribuci??n de las modalidades de cada variable. Los n??meros representan la situaci??n de algun pa??s en ese indicador, donde el mayor valor num??rico es la mejor situaci??n.
 
 <<results=tex,echo=FALSE>>=
 library(reporttools)
@@ -34,11 +34,11 @@ tableNominal(vars = dataidx[, c(2:5)],
 @
 
 
-Como apreciamos en la Tabla \ref{Tfrecuencias}, los países en la mejor situación son los menos, salvo en el caso del \emph{índice de libertas mundial}\footnote{Nótese que esto se puede deber a la {\bf menor} cantidad de categorías.}
+Como apreciamos en la Tabla \ref{Tfrecuencias}, los pa??ses en la mejor situaci??n son los menos, salvo en el caso del \emph{??ndice de libertas mundial}\footnote{N??tese que esto se puede deber a la {\bf menor} cantidad de categor??as.}
 
 \clearpage
 
-Para resaltar lo anterior, tenemos la Figura \ref{barplots} en la página \pageref{barplots}. 
+Para resaltar lo anterior, tenemos la Figura \ref{barplots} en la p??gina \pageref{barplots}. 
 
 
 %%%%% figure
@@ -59,7 +59,7 @@ demoTableRelPlot=barplot(demoTableRel,main=title,
 ecoTable=table(dataidx[,3])
 names(ecoTable)=level5
 ecoTableRel=round(prop.table(ecoTable)*100,1)
-title='Libertad Económica'
+title='Libertad Econ??mica'
 paleta='red'
 barplot(ecoTableRel,main=title,
         col=paleta,ylim = c(0,100),
@@ -84,17 +84,17 @@ barplot(pressTableRel,main=title,
         col=paleta,ylim = c(0,100),
         ylab = "%",las=2)
 @
-\caption{Distribución de Indicadores}
+\caption{Distribuci??n de Indicadores}
 \label{barplots}
 \end{figure}
 
-Además de la distribución de los variable, es importante saber el valor central. Como los valores son de naturaleza ordinal debemos pedir la {\bf mediana} y otras medidas de posición (como los \emph{cuartiles}, los que no pediremos pues son pocos valores). La mediana de cada variable la mostramos en la Tabla \ref{stats} en la página \pageref{stats}.
+Adem??s de la distribuci??n de los variable, es importante saber el valor central. Como los valores son de naturaleza ordinal debemos pedir la {\bf mediana} y otras medidas de posici??n (como los \emph{cuartiles}, los que no pediremos pues son pocos valores). La mediana de cada variable la mostramos en la Tabla \ref{stats} en la p??gina \pageref{stats}.
 
 <<summary, results=tex, echo=FALSE>>=
 library(stargazer)
 vars1 <- dataidx[, c(2:5)]
 
-stargazer(vars1,title = "Medidas estadísticas", label = "stats",summary.stat = c("n", "median"))
+stargazer(vars1,title = "Medidas estad??sticas", label = "stats",summary.stat = c("n", "median"))
 @
 
 

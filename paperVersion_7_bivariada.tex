@@ -1,0 +1,53 @@
+\section{Exploraci??n Bivariada}\label{bivariada}
+
+En este trabajo estamos interesados en el impacto de los otros indices en el nivel de Democracia. Veamos las relaciones bivariadas que tiene esta variable con todas las dem??s:
+
+
+% Table created by stargazer v.5.2.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
+% Date and time: Fri, Jun 29, 2018 - 16:15:44
+\begin{table}[!htbp] \centering 
+  \caption{Correlaci??n de Democracia con las dem??s variables} 
+  \label{corrDem} 
+\begin{tabular}{@{\extracolsep{5pt}} ccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+WorldFreedom & EconomicFreedom & PressFreedom \\ 
+\hline \\[-1.8ex] 
+$0.896$ & $0.587$ & $0.771$ \\ 
+\hline \\[-1.8ex] 
+\end{tabular} 
+\end{table} 
+
+Veamos la correlaci??n entre las variables independientes:
+
+
+% Table created by stargazer v.5.2.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
+% Date and time: Fri, Jun 29, 2018 - 16:15:44
+\begin{table}[!htbp] \centering 
+  \caption{Correlaci??n entre variables independientes} 
+  \label{corrTableX} 
+\begin{tabular}{@{\extracolsep{5pt}} cccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & WorldFreedom & EconomicFreedom & PressFreedom \\ 
+\hline \\[-1.8ex] 
+WorldFreedom & 1 &  &  \\ 
+EconomicFreedom & 0.49 & 1 &  \\ 
+PressFreedom & 0.83 & 0.53 & 1 \\ 
+\hline \\[-1.8ex] 
+\end{tabular} 
+\end{table} 
+Lo visto en la Tabla \ref{corrTableX} se refuerza claramente en la Figura \ref{corrPlotX}.
+
+\begin{figure}[h]
+\centering
+\begin{adjustbox}{width=7cm,height=7cm,clip,trim=1.5cm 0.5cm 0cm 1.5cm}
+\includegraphics{paperVersion_7_bivariada-corrPlotX}
+\end{adjustbox}
+\caption{correlaci??n entre predictores}
+\label{corrPlotX}
+\end{figure}
+
+
+
+\endinput
